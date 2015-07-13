@@ -3,7 +3,7 @@ using ::testing::Eq;
 
 std::string convert(unsigned int arabic) {
   std::string roman{""};
-  if (arabic >= 10) {
+  while (arabic >= 10) {
     arabic -= 10;
     roman += "X";
   }
@@ -20,4 +20,5 @@ TEST(RomanNumeralConverter, CanConvertPositiveDigits) {
   EXPECT_THAT(convert(11), Eq("XI"));
   EXPECT_THAT(convert(12), Eq("XII"));
   EXPECT_THAT(convert(13), Eq("XIII"));
+  EXPECT_THAT(convert(20), Eq("XX"));
 }
