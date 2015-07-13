@@ -7,8 +7,10 @@ std::string convert(unsigned int arabic) {
     arabic -= 10;
     roman += "X";
   }
-  while(arabic-- > 0)
+  while(arabic >= 1) {
+    arabic -= 1;
     roman += "I";
+  }
   return roman;
 }
 
