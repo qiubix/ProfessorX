@@ -1,16 +1,20 @@
 #include "gmock/gmock.h"
 using ::testing::Eq;
+using namespace std;
 
-std::string convert(unsigned int arabic) {
-  std::string roman{""};
-  while (arabic >= 10) {
-    arabic -= 10;
-    roman += "X";
-  }
-  while(arabic >= 1) {
-    arabic -= 1;
-    roman += "I";
-  }
+string convert(unsigned int arabic) {
+  const auto arabicToRomanConversions = {
+    make_pair(10u, "X"),
+    make_pair(1u, "I")
+  };
+  string roman{""};
+
+  for ( auto arabicToRoman : arabicToRomanConversions )
+    while ( arabic >= arabicToRoman.first ) {
+      arabic -= arabicToRoman.first;
+      roman += arabicToRoman.second;
+    }
+
   return roman;
 }
 
