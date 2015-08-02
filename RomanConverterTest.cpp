@@ -27,4 +27,5 @@ TEST(RomanNumeralConverter, CanConvertPositiveDigits) {
   EXPECT_THAT(convert(12), Eq("XII"));
   EXPECT_THAT(convert(13), Eq("XIII"));
   EXPECT_THAT(convert(20), Eq("XX"));
+  EXPECT_THAT(convert(5), Eq("V"));
 }
