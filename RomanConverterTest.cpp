@@ -5,6 +5,7 @@ using namespace std;
 string convert(unsigned int arabic) {
   const auto arabicToRomanConversions = {
     make_pair(10u, "X"),
+    make_pair(5u, "V"),
     make_pair(1u, "I")
   };
   string roman{""};
