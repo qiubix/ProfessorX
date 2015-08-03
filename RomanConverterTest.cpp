@@ -4,6 +4,7 @@ using namespace std;
 
 string convert(unsigned int arabic) {
   const auto arabicToRomanConversions = {
+    make_pair(100u, "C"),
     make_pair(50u, "L"),
     make_pair(10u, "X"),
     make_pair(5u, "V"),
@@ -31,4 +32,5 @@ TEST(RomanNumeralConverter, CanConvertPositiveDigits) {
   EXPECT_THAT(convert(20), Eq("XX"));
   EXPECT_THAT(convert(5), Eq("V"));
   EXPECT_THAT(convert(50), Eq("L"));
+  EXPECT_THAT(convert(100), Eq("C"));
 }
