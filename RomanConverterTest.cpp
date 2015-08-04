@@ -33,4 +33,6 @@ TEST(RomanNumeralConverter, CanConvertPositiveDigits) {
   EXPECT_THAT(convert(5), Eq("V"));
   EXPECT_THAT(convert(50), Eq("L"));
   EXPECT_THAT(convert(100), Eq("C"));
+  EXPECT_THAT(convert(80), Eq("LXXX"));
+  EXPECT_THAT(convert(288), Eq("CCLXXXVIII"));
 }
