@@ -37,4 +37,7 @@ TEST(RomanNumeralConverter, CanConvertPositiveDigits) {
   EXPECT_THAT(convert(80), Eq("LXXX"));
   EXPECT_THAT(convert(288), Eq("CCLXXXVIII"));
   EXPECT_THAT(convert(4), Eq("IV"));
+  EXPECT_THAT(convert(2999), Eq("MMCMXCIX"));
+  EXPECT_THAT(convert(3447), Eq("MMMCDXLVII"));
+  EXPECT_THAT(convert(1513), Eq("MDXIII"));
 }
