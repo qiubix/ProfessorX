@@ -8,6 +8,7 @@ string convert(unsigned int arabic) {
     make_pair(50u, "L"),
     make_pair(10u, "X"),
     make_pair(5u, "V"),
+    make_pair(4u, "IV"),
     make_pair(1u, "I")
   };
   string roman{""};
